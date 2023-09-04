@@ -56,7 +56,7 @@ class _Chat_WidgetState extends State<Chat_Widget> {
                       ),
                     ],
                   ),
-                  Spacer(),
+                  const Spacer(),
                   const Text(
                     '11:55',
                     style: TextStyle(
