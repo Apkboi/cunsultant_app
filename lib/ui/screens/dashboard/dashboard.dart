@@ -1,7 +1,6 @@
 import 'dart:developer';
 
 import 'package:cunsultant_app/ui/screens/account/account.dart';
-import 'package:cunsultant_app/ui/screens/add_screen/add_screen.dart';
 import 'package:cunsultant_app/ui/screens/chats/chat_screen.dart';
 import 'package:cunsultant_app/ui/screens/community/community.dart';
 import 'package:cunsultant_app/ui/screens/home/home_screen.dart';
@@ -20,59 +19,74 @@ class DashBoardScreen extends StatefulWidget {
 class _DashBoardScreenState extends State<DashBoardScreen> {
   int selectindex = 0;
   static List<StatefulWidget> pages = [
-    const HomeScreen (),
+    const HomeScreen(),
     const Community(),
     const ChatScreen(),
     const Account(),
   ];
+
+  // FloatingActionButton(
+  // // elevation: 0,
+  //
+  // backgroundColor: Theme.of(context).colorScheme.background,
+  // foregroundColor: Theme.of(context).colorScheme.primary,
+  // onPressed: () {
+  // Navigator.of(context)
+  //     .push(CupertinoPageRoute(builder: (index) => const AddDoctor()));
+  // },
+  // shape: const CircleBorder(eccentricity: 0.7),
+  // child: const Icon(Icons.add),
+  // )
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.of(context).push(CupertinoPageRoute(builder: (index)=>const AddDoctor()));
-        },
-        shape: const CircleBorder(eccentricity: 0.7),
-        child: const Icon(Icons.add),
+      floatingActionButton: Card(
+        elevation: 3,
+        shadowColor: Theme.of(context).colorScheme.primary,
+        color: Theme.of(context).colorScheme.background,
+        shape: const CircleBorder(),
+        child: SizedBox(
+            height: 60,
+            width: 60,
+            child: Center(
+              child: Icon(
+                Icons.add,
+                color: Theme.of(context).colorScheme.primary,
+              ),
+            )),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: IndexedStack(index: selectindex, children: pages),
-
-    bottomNavigationBar: NavBar(
-
+      bottomNavigationBar: NavBar(
+        indicator: CircleAvatar(radius: 10,backgroundColor: Theme.of(context).colorScheme.primary,),
         navItem: [
-
           NavItemModel(
-            () {},
-            const Icon(Iconsax.home),
+            onTap: () {},
+            icon: const Icon(Iconsax.home),
           ),
           NavItemModel(
-            () {},
-            const Icon(Iconsax.creative_commons),
+            onTap: () {},
+            // selectedIcon: const Icon(Iconsax.add),
+            icon: const Icon(Iconsax.creative_commons),
           ),
           NavItemModel(
-            () {},
-            const Icon(Iconsax.message),
+            onTap: () {},
+            icon: const Icon(Iconsax.message),
           ),
           NavItemModel(
-            () {},
-            const Icon(Icons.person_add),
+            onTap: () {},
+            icon: const Icon(Iconsax.profile_add),
           ),
-
         ],
         onTap: (int index) {
           log('index is $index');
           _switchTap(index);
         },
-
-
       ),
-
-
     );
-
-
   }
+
   _switchTap(int index) {
     setState(() {
       selectindex = index;

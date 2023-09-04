@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 class Headers extends StatefulWidget {
   final String text;
   final IconData icon;
-  const Headers({Key? key, required this.text, required this.icon}) : super(key: key);
+
+  const Headers({Key? key, required this.text, required this.icon})
+      : super(key: key);
 
   @override
   State<Headers> createState() => _HeadersState();
@@ -12,12 +14,14 @@ class Headers extends StatefulWidget {
 class _HeadersState extends State<Headers> {
   @override
   Widget build(BuildContext context) {
-    return  Row(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-         widget.text,
-          style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
+          widget.text,
+          style: Theme.of(context)
+              .textTheme.headlineSmall
+              ?.copyWith( fontWeight: FontWeight.w600),
         ),
         Stack(
           clipBehavior: Clip.none,
@@ -41,7 +45,6 @@ class _HeadersState extends State<Headers> {
                   radius: 5,
                   backgroundColor: Colors.deepOrange,
                 )),
-
           ],
         )
       ],

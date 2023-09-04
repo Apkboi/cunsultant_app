@@ -14,39 +14,39 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return  const Scaffold(
+    return   Scaffold(
       body: Padding(
-        padding: EdgeInsets.all(16),
+        padding: const EdgeInsets.all(16),
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
+              const   SizedBox(
                 height: 40,
               ),
-              Headers(text: 'Home', icon: Iconsax.notification,),
-              SizedBox(
-                height: 30,
+              const   Headers(text: 'Home', icon: Iconsax.notification,),
+              const  SizedBox(
+                height: 20,
               ),
-              AppointmentWidget(),
-              SizedBox(
+              const   AppointmentWidget(),
+              const   SizedBox(
                 height: 40,
               ),
               Text(
                 'Nearby Doctor',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                style: Theme.of(context).textTheme.titleLarge?.copyWith( fontWeight: FontWeight.w500),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               NearbyDoc(),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               Text(
                 'Threads You Might Like',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w700),
               ),
 
               Threads(),

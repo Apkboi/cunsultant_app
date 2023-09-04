@@ -10,73 +10,86 @@ class NearbyDoc extends StatefulWidget {
 class _NearbyDocState extends State<NearbyDoc> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(color:Colors.white,borderRadius: BorderRadius.circular(10)),
-      height: 150,
+    return SizedBox(
+      height: 200,
       child: ListView.builder(
         shrinkWrap: true,
         scrollDirection: Axis.horizontal,
         itemCount: 5,
-        physics: BouncingScrollPhysics(),
-        itemBuilder: (BuildContext context, int index) =>  Padding(
-          padding: EdgeInsets.only(right: 20,left: 20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
+        physics: const BouncingScrollPhysics(),
+        itemBuilder: (BuildContext context, int index) => Center(
+          child: Container(
+            decoration: BoxDecoration(
+                color: Colors.white, borderRadius: BorderRadius.circular(10)),
+            child: Padding(
+              padding: const EdgeInsets.only(
+                  right: 20, left: 20, top: 16, bottom: 16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
                 children: [
-                  Stack(clipBehavior: Clip.none,
-                      children: [
+                  Row(
+                    children: [
+                      Stack(clipBehavior: Clip.none, children: [
                         const CircleAvatar(
                           radius: 25,
                           backgroundColor: Colors.deepOrange,
                         ),
-                        Positioned(bottom: 8,
-                            child: Image.asset(height: 50,width: 50,
-                                'assets/png/doc.png')),
+                        Positioned(
+                            bottom: 8,
+                            top: -29,
+                            child: Image.asset(
+                                height: 50, width: 50, 'assets/png/doc.png')),
                       ]),
+                      const SizedBox(
+                        width: 15,
+                      ),
+                      const Icon(
+                        Icons.star,
+                        size: 15,
+                        color: Colors.deepOrange,
+                      ),
+                      Text(
+                        '4.5',
+                        style: Theme.of(context)
+                            .textTheme
+                            .labelLarge
+                            ?.copyWith(color: Colors.grey),
+                      ),
+                    ],
+                  ),
                   const SizedBox(
-                    width: 15,
+                    height: 16,
                   ),
-                  const Icon(
-                    Icons.star,
-                    size: 15,
-                    color: Colors.deepOrange,
+                  Text(
+                    'Theresa Webb',
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                          fontWeight: FontWeight.w600,
+                        ),
                   ),
-                  const Text(
-                    '4.5',
-                    style: TextStyle(color: Colors.grey),
+                  const SizedBox(
+                    height: 8,
                   ),
+                  Text(
+                    'Dermatology',
+                    style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                        fontWeight: FontWeight.w500,
+                        // fontSize: 12,
+                        color: Colors.deepOrange),
+                  ),
+                  const SizedBox(
+                    height: 8,
+                  ),
+                  Text(
+                    'Sifoam Hospital',
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                        fontWeight: FontWeight.w500,
+                        // fontSize: 12,
+                        color: Colors.grey),
+                  )
                 ],
               ),
-              const SizedBox(
-                height: 10,
-              ),
-              const Text(
-                'Theresa Webb',
-                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15),
-              ),
-              const SizedBox(
-                height:5,
-              ),
-              const Text(
-                'Dermatology',
-                style: TextStyle(
-                    fontWeight: FontWeight.w500,
-                    fontSize: 12,
-                    color: Colors.deepOrange),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              const Text(
-                'Sifoam Hospital',
-                style: TextStyle(
-                    fontWeight: FontWeight.w500,
-                    fontSize: 12,
-                    color: Colors.grey),
-              )
-            ],
+            ),
           ),
         ),
       ),
