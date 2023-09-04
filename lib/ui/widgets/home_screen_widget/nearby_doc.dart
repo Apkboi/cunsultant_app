@@ -18,9 +18,8 @@ class _NearbyDocState extends State<NearbyDoc> {
         itemCount: 5,
         physics: const BouncingScrollPhysics(),
         itemBuilder: (BuildContext context, int index) => Center(
-          child: Container(
-            decoration: BoxDecoration(
-                color: Colors.white, borderRadius: BorderRadius.circular(10)),
+          child: Card(
+            // decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
             child: Padding(
               padding: const EdgeInsets.only(
                   right: 20, left: 20, top: 16, bottom: 16),

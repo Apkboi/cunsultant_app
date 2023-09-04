@@ -4,7 +4,11 @@ import 'package:flutter/material.dart';
 
 class AppTheme {
   static ThemeData lightTheme =
-      ThemeData(colorScheme: lightColorScheme, textTheme: textTheme);
+      ThemeData(
+          // scaffoldBackgroundColor:lightColorScheme.background ,
+          colorScheme: lightColorScheme, textTheme: textTheme);
   static ThemeData darkTheme =
-      ThemeData(colorScheme: darkColorScheme, textTheme: textTheme);
+      ThemeData(
+          // scaffoldBackgroundColor:darkColorScheme.background ,
+          colorScheme: darkColorScheme, textTheme: textTheme);
 }

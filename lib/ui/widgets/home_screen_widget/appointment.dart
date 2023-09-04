@@ -12,7 +12,7 @@ class _AppointmentWidgetState extends State<AppointmentWidget> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          color: Colors.white,
+
           borderRadius: BorderRadius.circular(10),
           boxShadow: [
             BoxShadow(
