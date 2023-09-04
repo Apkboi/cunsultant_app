@@ -39,7 +39,7 @@ class _ProfileThreadsState extends State<ProfileThreads> {
                   style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w500,
-                      color: Colors.greenAccent.withOpacity(0.5)),
+                      color: Colors.greenAccent.withOpacity(0.8)),
                 ),
                 const Icon(Icons.more_horiz_outlined)
               ],

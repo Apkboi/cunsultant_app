@@ -30,6 +30,7 @@ class _Chat_WidgetState extends State<Chat_Widget> {
                   Stack(clipBehavior: Clip.none,
                       children: [
                         const CircleAvatar(
+
                           radius: 25,
                           backgroundColor: Colors.deepOrange,
                         ),

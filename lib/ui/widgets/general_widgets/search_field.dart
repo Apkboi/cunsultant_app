@@ -17,7 +17,7 @@ class _SearchFieldState extends State<SearchField> {
           borderRadius: BorderRadius.circular(20),
               boxShadow: [BoxShadow(
                 blurRadius: 1,spreadRadius: 1,
-                color: Colors.grey.withOpacity(0.2),
+                color: Colors.grey.withOpacity(0.02),
                 offset: const Offset(0,1)
               )]
         ),

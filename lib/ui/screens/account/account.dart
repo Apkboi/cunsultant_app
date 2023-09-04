@@ -68,6 +68,7 @@ class _AccountState extends State<Account> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
+                      width: 200,
                       padding: EdgeInsets.all(10),
                       decoration: BoxDecoration(
                         color: Colors.white,
@@ -101,6 +102,7 @@ class _AccountState extends State<Account> {
                       ),
                     ),
                     Container(
+                      width: 200,
                       padding: EdgeInsets.all(10),
                       decoration: BoxDecoration(
                           color: Colors.white,
