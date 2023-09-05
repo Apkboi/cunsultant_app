@@ -15,7 +15,7 @@ class _AccountState extends State<Account> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.all(16),
+        padding:const EdgeInsets.all(16),
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Column(
@@ -63,7 +63,7 @@ class _AccountState extends State<Account> {
                 height: 60,
               ),
                Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -103,13 +103,13 @@ class _AccountState extends State<Account> {
                     ),
                     Container(
                       width: 200,
-                      padding: EdgeInsets.all(10),
+                      padding: const EdgeInsets.all(10),
                       decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
                           boxShadow: [BoxShadow(
                               spreadRadius: 1,blurRadius: 1,
-                              offset: Offset(6, 4),
+                              offset: const Offset(6, 4),
                               color: Colors.grey.withOpacity(0.03)
 
                           )]
