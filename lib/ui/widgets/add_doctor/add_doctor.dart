@@ -37,14 +37,7 @@ class _AddDocState extends State<AddDoc> {
                     const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Colors.white,
-                    boxShadow: [
-                      BoxShadow(
-                          offset: Offset(1, 1),
-                          blurRadius: 2,
-                          spreadRadius: 2,
-                          color: Colors.grey.withOpacity(0.1))
-                    ]),
+                ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -63,22 +56,22 @@ class _AddDocState extends State<AddDoc> {
                         const SizedBox(
                           width: 10,
                         ),
-                        const Column(
+                        Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
                               'dr.Theresa Webb',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w600, fontSize: 18),
+                              style:  Theme.of(context).textTheme.titleMedium!.copyWith(
+                                  fontWeight: FontWeight.w600, ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 5,
                             ),
                             Text(
                               'Dermatology',
-                              style: TextStyle(
+                              style:  Theme.of(context).textTheme.titleSmall!.copyWith(
                                   fontWeight: FontWeight.w500,
-                                  fontSize: 14,
+
                                   color: Colors.grey),
                             )
                           ],
@@ -88,17 +81,17 @@ class _AddDocState extends State<AddDoc> {
                     const SizedBox(
                       height: 20,
                     ),
-                    const Row(
+                     Row(
                       children: [
-                        Icon(
+                        const Icon(
                           Icons.star,
                           color: Colors.deepOrange,
                           size: 17,
                         ),
-                        Text('4.5 . ', style: TextStyle(color: Colors.grey)),
+                        Text('4.5 . ', style: Theme.of(context).textTheme.labelMedium!.copyWith(color: Colors.grey)),
                         Text(
                           'Available Mon - Wed, 9:00 - 15:00 ',
-                          style: TextStyle(color: Colors.grey),
+                          style: Theme.of(context).textTheme.labelMedium!.copyWith(color: Colors.grey),
                         ),
                       ],
                     ),
@@ -107,156 +100,8 @@ class _AddDocState extends State<AddDoc> {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(bottom: 10),
-            child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.white,
-                  boxShadow: [
-                    BoxShadow(
-                        offset: Offset(1, 1),
-                        blurRadius: 2,
-                        spreadRadius: 2,
-                        color: Colors.grey.withOpacity(0.1))
-                  ]),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    children: [
-                      Stack(clipBehavior: Clip.none, children: [
-                        const CircleAvatar(
-                          radius: 25,
-                          backgroundColor: Colors.deepOrange,
-                        ),
-                        Positioned(
-                            bottom: 8,
-                            child: Image.asset(
-                                height: 50, width: 50, 'assets/png/doc.png')),
-                      ]),
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      const Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'dr.Theresa Webb',
-                            style: TextStyle(
-                                fontWeight: FontWeight.w600, fontSize: 18),
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            'Dermatology',
-                            style: TextStyle(
-                                fontWeight: FontWeight.w500,
-                                fontSize: 14,
-                                color: Colors.grey),
-                          )
-                        ],
-                      ),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  const Row(
-                    children: [
-                      Icon(
-                        Icons.star,
-                        color: Colors.deepOrange,
-                        size: 17,
-                      ),
-                      Text('4.5 . ', style: TextStyle(color: Colors.grey)),
-                      Text(
-                        'Available Mon - Wed, 9:00 - 15:00 ',
-                        style: TextStyle(color: Colors.grey),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(bottom: 10),
-            child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.white,
-                  boxShadow: [
-                    BoxShadow(
-                        offset: Offset(1, 1),
-                        blurRadius: 2,
-                        spreadRadius: 2,
-                        color: Colors.grey.withOpacity(0.1))
-                  ]),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    children: [
-                      Stack(clipBehavior: Clip.none, children: [
-                        const CircleAvatar(
-                          radius: 25,
-                          backgroundColor: Colors.deepOrange,
-                        ),
-                        Positioned(
-                            bottom: 8,
-                            child: Image.asset(
-                                height: 50, width: 50, 'assets/png/doc.png')),
-                      ]),
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      const Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'dr.Theresa Webb',
-                            style: TextStyle(
-                                fontWeight: FontWeight.w600, fontSize: 18),
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            'Dermatology',
-                            style: TextStyle(
-                                fontWeight: FontWeight.w500,
-                                fontSize: 14,
-                                color: Colors.grey),
-                          )
-                        ],
-                      ),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  const Row(
-                    children: [
-                      Icon(
-                        Icons.star,
-                        color: Colors.deepOrange,
-                        size: 17,
-                      ),
-                      Text('4.5 . ', style: TextStyle(color: Colors.grey)),
-                      Text(
-                        'Available Mon - Wed, 9:00 - 15:00 ',
-                        style: TextStyle(color: Colors.grey),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          ),
+
+
           const DocItems()
         ]),
       ),

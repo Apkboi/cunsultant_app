@@ -44,16 +44,14 @@ class _AccountState extends State<Account> {
                     const SizedBox(
                       height: 10,
                     ),
-                    const Text(
+                     Text(
                       'Mr. Consultant App',
-                      style:
-                          TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
+                      style: Theme.of(context).textTheme.titleMedium!.copyWith(fontWeight: FontWeight.w600,),
                     ),
-                    const Text(
+                     Text(
                       '29 years old',
-                      style: TextStyle(
+                      style: Theme.of(context).textTheme.labelLarge!.copyWith(
                           fontWeight: FontWeight.w500,
-                          fontSize: 16,
                           color: Colors.grey),
                     ),
                   ],
@@ -63,75 +61,72 @@ class _AccountState extends State<Account> {
                 height: 60,
               ),
                Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
-                      width: 200,
+                      width: 150,
                       padding: EdgeInsets.all(10),
                       decoration: BoxDecoration(
-                        color: Colors.white,
                         borderRadius: BorderRadius.circular(10),
-                        boxShadow: [BoxShadow(
-                            offset: Offset(6, 4),
-                            spreadRadius: 2,blurRadius: 2,
-                          color: Colors.grey.withOpacity(0.05)
-                        )]
                       ),
-                      child: Row(
-                        children: [
-                          const CircleAvatar(
-                            radius: 3,
-                            backgroundColor: Colors.deepOrange,
-                          ),
-                          const SizedBox(
-                            width: 5,
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                      child: Card(
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+                          child: Row(
                             children: [
-                              Text('Weight',style: TextStyle(color: Colors.black.withOpacity(0.5)),),
-                              const Text(
-                                '55kg',
-                                style: TextStyle(fontWeight: FontWeight.w600),
+                              const CircleAvatar(
+                                radius: 3,
+                                backgroundColor: Colors.deepOrange,
                               ),
+                              const SizedBox(
+                                width: 5,
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text('Weight',style:  Theme.of(context).textTheme.titleSmall!.copyWith(color: Colors.black.withOpacity(0.5)),),
+                                   Text(
+                                    '55kg',
+                                    style:  Theme.of(context).textTheme.titleMedium!.copyWith(fontWeight: FontWeight.w600),
+                                  ),
+                                ],
+                              )
                             ],
-                          )
-                        ],
+                          ),
+                        ),
                       ),
                     ),
                     Container(
-                      width: 200,
+                      width: 150,
                       padding: const EdgeInsets.all(10),
                       decoration: BoxDecoration(
-                          color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
-                          boxShadow: [BoxShadow(
-                              spreadRadius: 1,blurRadius: 1,
-                              offset: const Offset(6, 4),
-                              color: Colors.grey.withOpacity(0.03)
-
-                          )]
                       ),
-                      child: Row(
-                        children: [
-                          const CircleAvatar(
-                            radius: 3,
-                            backgroundColor: Colors.deepOrange,
-                          ),
-                          const SizedBox(
-                            width: 5,
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                      child: Card(
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+                          child: Row(
                             children: [
-                              Text('height',style: TextStyle(color: Colors.black.withOpacity(0.5))),
-                              const Text('170cm',
-                                  style: TextStyle(fontWeight: FontWeight.w600)),
+                              const CircleAvatar(
+                                radius: 3,
+                                backgroundColor: Colors.deepOrange,
+                              ),
+                              const SizedBox(
+                                width: 5,
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text('height',style:  Theme.of(context).textTheme.titleSmall!.copyWith(color: Colors.black.withOpacity(0.5))),
+                                   Text('170cm',
+                                      style:  Theme.of(context).textTheme.titleMedium!.copyWith(fontWeight: FontWeight.w600)),
+                                ],
+                              )
                             ],
-                          )
-                        ],
+                          ),
+                        ),
                       ),
                     )
                   ],
@@ -140,9 +135,9 @@ class _AccountState extends State<Account> {
               const SizedBox(
                 height: 40,
               ),
-              const Text(
+               Text(
                 'Your Recent Threads',
-                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+                style:  Theme.of(context).textTheme.titleMedium!.copyWith(fontWeight: FontWeight.w500,),
               ),
               // SizedBox(height: 20,),
               const ProfileThreads()

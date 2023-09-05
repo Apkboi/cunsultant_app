@@ -39,9 +39,9 @@ class _AddDoctorState extends State<AddDoctor> {
                 const SizedBox(
                   width: 10,
                 ),
-                const Text(
+                 Text(
                   'Search Your\nPreffered Doctor',
-                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+                  style:Theme.of(context).textTheme.titleLarge!.copyWith(fontWeight: FontWeight.w500, ),
                 ),
               ],
             ),
@@ -52,61 +52,58 @@ class _AddDoctorState extends State<AddDoctor> {
               child: InkWell(
                 onTap: ()=>AppUtils.showCustomModalBottomSheet(context, AddDoc()),
                 child: Container(
+                  
                   padding: const EdgeInsets.all(15),
                   decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),
-                    boxShadow: [BoxShadow(
-                      color: Colors.grey.withOpacity(0.1),
-                      spreadRadius: 2,
-                      blurRadius: 2,
+                    color: Theme.of(context).colorScheme.surface.withOpacity(0.2),
+                    border: Border.all(color: Theme.of(context).colorScheme.onBackground.withOpacity(0.2))
 
-                    )],
-                    color: Colors.white,
                   ),
                   width: MediaQuery.of(context).size.width,
                   child:  Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Row(
+                       Row(
                         children: [
-                          Icon(Iconsax.home1,size: 16,color: Colors.greenAccent,),
-                          SizedBox(width: 5,),
+                          const Icon(Iconsax.home1,size: 16,color: Colors.greenAccent,),
+                          const SizedBox(width: 5,),
 
                           Text(
                             'Clinic',
                             style:
-                            TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
+                           Theme.of(context).textTheme.titleMedium!.copyWith(fontWeight: FontWeight.w600, ),
                           )
                         ],
                       ),
                       const SizedBox(height: 15,),
-                      const Text(
+                       Text(
                         'VAF Clinic',
-                        style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+                        style: Theme.of(context).textTheme.titleLarge!.copyWith( fontWeight: FontWeight.w600),
                       ),
                       const SizedBox(height: 5,),
                       Text(
                         'JI. Pucang Clinic,NO 49 Gubeng',
-                        style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15,color: Colors.black.withOpacity(0.8)),
+                        style: Theme.of(context).textTheme.titleSmall!.copyWith(fontWeight: FontWeight.w500,),
                       ),
                       const SizedBox(height: 5,),
-                      const Text(
+                       Text(
                         '11.8km from your location',
-                        style: TextStyle(fontWeight: FontWeight.w500, fontSize: 12,color: Colors.grey),
+                        style: Theme.of(context).textTheme.labelMedium!.copyWith(fontWeight: FontWeight.w500, color: Colors.grey),
                       ),
                       const SizedBox(height: 15,),
-                      const Row(
+                       Row(
                         children: [
                           Text(
                             '12 doctors ',
-                            style: TextStyle(fontWeight: FontWeight.w500, fontSize: 14,color: Colors.deepOrangeAccent),
+                            style: Theme.of(context).textTheme.titleSmall!.copyWith(fontWeight: FontWeight.w500, fontSize: 14,color: Colors.deepOrangeAccent),
                           ),
                           Text(
                             ' in ',
-                            style: TextStyle(fontWeight: FontWeight.w500, fontSize: 14,color: Colors.black87),
+                            style:  Theme.of(context).textTheme.titleSmall!.copyWith(fontWeight: FontWeight.w500, fontSize: 14,color: Colors.black87),
                           ),
                           Text(
                             '3 speciality',
-                            style: TextStyle(fontWeight: FontWeight.w500, fontSize: 14,color: Colors.deepOrangeAccent),
+                            style: Theme.of(context).textTheme.titleSmall!.copyWith(fontWeight: FontWeight.w500, fontSize: 14,color: Colors.deepOrangeAccent),
                           ),
                         ],
                       )

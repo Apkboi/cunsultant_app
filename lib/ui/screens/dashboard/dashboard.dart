@@ -1,6 +1,6 @@
 import 'dart:developer';
-
 import 'package:cunsultant_app/ui/screens/account/account.dart';
+import 'package:cunsultant_app/ui/screens/add_screen/add_screen.dart';
 import 'package:cunsultant_app/ui/screens/chats/chat_screen.dart';
 import 'package:cunsultant_app/ui/screens/community/community.dart';
 import 'package:cunsultant_app/ui/screens/home/home_screen.dart';
@@ -46,15 +46,18 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
         shadowColor: Theme.of(context).colorScheme.primary,
         color: Theme.of(context).colorScheme.background,
         shape: const CircleBorder(),
-        child: SizedBox(
-            height: 60,
-            width: 60,
-            child: Center(
-              child: Icon(
-                Icons.add,
-                color: Theme.of(context).colorScheme.primary,
-              ),
-            )),
+        child: InkWell(
+          onTap:()=> Navigator.of(context).push(CupertinoPageRoute(builder: (index)=>AddDoctor())),
+          child: SizedBox(
+              height: 60,
+              width: 60,
+              child: Center(
+                child: Icon(
+                  Icons.add,
+                  color: Theme.of(context).colorScheme.primary,
+                ),
+              )),
+        ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: IndexedStack(index: selectindex, children: pages),

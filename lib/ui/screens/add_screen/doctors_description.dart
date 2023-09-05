@@ -19,65 +19,65 @@ class _DoctorsDetailsState extends State<DoctorsDetails> {
           scrollDirection: Axis.vertical,
           child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 40,
               ),
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.lightBlue.shade500,
-                ),
-                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-                child: Row(
-                  // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const SizedBox(
-                      height: 30,
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text(
-                          'dr. Theresa\nWebb',
-                          style: TextStyle(
-                              fontWeight: FontWeight.w600,
-                              fontSize: 20,
-                              color: Colors.white),
-                        ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        const Text(
-                          'Dermatology',
-                          style: TextStyle(
-                              fontWeight: FontWeight.w500,
-                              fontSize: 14,
-                              color: Colors.white),
-                        ),
-                        const SizedBox(
-                          height: 20,
-                        ),
-                        RatingBar.builder(
-                          initialRating: 3,
-                          minRating: 1,
-                          direction: Axis.horizontal,
-                          allowHalfRating: true,
-                          itemCount: 5,
-                          itemSize: 18,
-                          // itemPadding:
-                          //     const EdgeInsets.symmetric(horizontal: 4.0),
-                          itemBuilder: (context, _) => const Icon(
-                            Icons.star,
-                            size: 15,
-                            color: Colors.white,
+              Card(
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+
+                  ),
+                  padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                  child: Row(
+                    // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const SizedBox(
+                        height: 30,
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                           Text(
+                            'dr. Theresa\nWebb',
+                            style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white),
                           ),
-                          onRatingUpdate: (rating) {},
-                        )
-                      ],
-                    ),
-                    Spacer(),
-                    Image.asset(height: 200, 'assets/png/doc.png')
-                  ],
+                          const SizedBox(
+                            height: 10,
+                          ),
+                           Text(
+                            'Dermatology',
+                            style: Theme.of(context).textTheme.labelLarge!.copyWith(
+                                fontWeight: FontWeight.w500,
+                                color: Colors.white),
+                          ),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          RatingBar.builder(
+                            initialRating: 3,
+                            minRating: 1,
+                            direction: Axis.horizontal,
+                            allowHalfRating: true,
+                            itemCount: 5,
+                            itemSize: 18,
+                            // itemPadding:
+                            //     const EdgeInsets.symmetric(horizontal: 4.0),
+                            itemBuilder: (context, _) => const Icon(
+                              Icons.star,
+                              size: 15,
+                              color: Colors.white,
+                            ),
+                            onRatingUpdate: (rating) {},
+                          )
+                        ],
+                      ),
+                      Spacer(),
+                      Image.asset(height: 200, 'assets/png/doc.png')
+                    ],
+                  ),
                 ),
               ),
               Padding(
@@ -95,14 +95,13 @@ class _DoctorsDetailsState extends State<DoctorsDetails> {
                         const SizedBox(
                           width: 5,
                         ),
-                        const Column(
+                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("Language"),
+                            Text("Language",style: Theme.of(context).textTheme.titleSmall!.copyWith(fontWeight: FontWeight.w400),),
                             Text(
                               'ENG',
-                              style: TextStyle(
-                                  fontSize: 20, fontWeight: FontWeight.w600),
+                              style: Theme.of(context).textTheme.titleLarge!.copyWith(fontWeight: FontWeight.w600),
                             )
                           ],
                         )
@@ -118,14 +117,14 @@ class _DoctorsDetailsState extends State<DoctorsDetails> {
                         const SizedBox(
                           width: 5,
                         ),
-                        const Column(
+                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("Experince"),
+                            Text("Experince",style: Theme.of(context).textTheme.titleSmall!.copyWith(fontWeight: FontWeight.w400),),
                             Text(
                               '8 years',
-                              style: TextStyle(
-                                  fontSize: 20, fontWeight: FontWeight.w600),
+                              style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                                 fontWeight: FontWeight.w600),
                             )
                           ],
                         )
@@ -141,14 +140,14 @@ class _DoctorsDetailsState extends State<DoctorsDetails> {
                         const SizedBox(
                           width: 5,
                         ),
-                        const Column(
+                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("Patients"),
+                            Text("Patients",style: Theme.of(context).textTheme.titleSmall!.copyWith(fontWeight: FontWeight.w400),),
                             Text(
                               '189',
-                              style: TextStyle(
-                                  fontSize: 20, fontWeight: FontWeight.w600),
+                              style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                                  fontWeight: FontWeight.w600),
                             )
                           ],
                         )
@@ -157,47 +156,48 @@ class _DoctorsDetailsState extends State<DoctorsDetails> {
                   ],
                 ),
               ),
-              const Padding(
+               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                        'Doctors, also known as physicians, are licensed health professionals who maintain and restore human health through the practice of medicine. They examine patients, review their medical history, diagnose illnesses or injuries, administer treatment, and counsel patients on their health and well-being.'),
+                        'Doctors, also known as physicians, are licensed health professionals who maintain and restore human health through the practice of medicine. They examine patients, review their medical history, diagnose illnesses or injuries, administer treatment, and counsel patients on their health and well-being.',
+                    style: Theme.of(context).textTheme.labelMedium!.copyWith(),),
                     Text(
                       'read more',
-                      style: TextStyle(color: Colors.deepOrange,fontWeight: FontWeight.w600),
+                      style: Theme.of(context).textTheme.titleMedium!.copyWith(color: Colors.deepOrange,fontWeight: FontWeight.w600),
                     ),
                   ],
                 ),
               ),
 
-              Row(
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 10,vertical: 10
+                ),
+                decoration: BoxDecoration(),
+                child: Row(
 
-                children: [
-                  Container(
-                    width: 150,
-                    decoration: const BoxDecoration(
+                  children: [
+                    Container(
+                      width: 100,
+                      decoration: const BoxDecoration(
 
+                      ),
                     ),
-                  ),
-                  Container(
-                    decoration: const BoxDecoration(
-                      color: Colors.white
-                    ),
-                    child:  Column(
+                    Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                      const Text('Siloam Hospital\nSurubaya',style: TextStyle(fontWeight: FontWeight.w600,fontSize: 20
+                       Text('Siloam Hospital\nSurubaya',style: Theme.of(context).textTheme.titleLarge!.copyWith(fontWeight: FontWeight.w600,
                       ),),
                       const SizedBox(height: 20,),
-                      Text('JI Raya Gubeng No 70',style: TextStyle(fontWeight: FontWeight.w500,fontSize: 16,
-                        color: Colors.black.withOpacity(0.5)
+                      Text('JI Raya Gubeng No 70',style: Theme.of(context).textTheme.titleMedium!.copyWith(fontWeight: FontWeight.w500,
+
                       ),),
                       SizedBox(height: 20,),
-                      const Row(
+                       Row(
                         children: [
-                          Text('Open in Google map',style: TextStyle(fontWeight: FontWeight.w400,fontSize: 15,
+                          Text('Open in Google map',style: Theme.of(context).textTheme.titleMedium!.copyWith(fontWeight: FontWeight.w400,
                               color: Colors.deepOrangeAccent
                           ),),
                           SizedBox(width: 5,),
@@ -205,8 +205,8 @@ class _DoctorsDetailsState extends State<DoctorsDetails> {
                         ],
                       )
                     ],),
-                  ),
-                ],
+                  ],
+                ),
               ),
 
             SizedBox(height: 30,),

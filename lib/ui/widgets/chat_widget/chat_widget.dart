@@ -41,27 +41,27 @@ class _Chat_WidgetState extends State<Chat_Widget> {
                   const SizedBox(
                     width: 10,
                   ),
-                  const Column(
+                   Column(
+                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         'dr. Theresa Webb',
-                        style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500),
+                        style: Theme.of(context).textTheme.titleMedium!.copyWith( fontWeight: FontWeight.w500),
                       ),
                       SizedBox(height: 5,),
                       Text(
                         'hey! idoit am available',
-                        style: TextStyle(
-                            fontSize: 13,
+                        style:Theme.of(context).textTheme.labelMedium!.copyWith(
+
                             fontWeight: FontWeight.w400,
                             color: Colors.grey),
                       ),
                     ],
                   ),
                   const Spacer(),
-                  const Text(
+                   Text(
                     '11:55',
-                    style: TextStyle(
-                        fontSize: 13,
+                    style:Theme.of(context).textTheme.labelMedium!.copyWith(
                         fontWeight: FontWeight.w400,
                         color: Colors.grey),
                   ),

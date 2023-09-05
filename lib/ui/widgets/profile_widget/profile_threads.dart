@@ -20,13 +20,6 @@ class _ProfileThreadsState extends State<ProfileThreads> {
         padding: EdgeInsets.all(10),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
-            color: Colors.white,
-            boxShadow: [BoxShadow(
-                spreadRadius: 1,
-                blurRadius: 1,
-                color: Colors.grey.withOpacity(0.05),
-                offset: const Offset(0, 0)
-            )]
         ),
         child:  Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -36,8 +29,7 @@ class _ProfileThreadsState extends State<ProfileThreads> {
               children: [
                 Text(
                   'Accident and Injuries',
-                  style: TextStyle(
-                      fontSize: 15,
+                  style:  Theme.of(context).textTheme.titleSmall!.copyWith(
                       fontWeight: FontWeight.w500,
                       color: Colors.greenAccent.withOpacity(0.8)),
                 ),
@@ -47,13 +39,13 @@ class _ProfileThreadsState extends State<ProfileThreads> {
             const SizedBox(
               height: 10,
             ),
-            const Text(
+             Text(
               'Hand/Wrist/Forearm injury that',
-              style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+              style:  Theme.of(context).textTheme.titleLarge!.copyWith(fontWeight: FontWeight.w500, ),
             ),
-            const Text(
+             Text(
               'won\'t go away',
-              style: TextStyle(fontWeight: FontWeight.w500, fontSize: 17,color: Colors.grey),
+              style: Theme.of(context).textTheme.titleLarge!.copyWith(fontWeight: FontWeight.w500, fontSize: 17,color: Colors.grey),
             ),
 
 
