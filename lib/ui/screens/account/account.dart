@@ -1,4 +1,5 @@
 import 'package:cunsultant_app/ui/widgets/profile_widget/profile_threads.dart';
+import 'package:cunsultant_app/utils/theme/text_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:cunsultant_app/ui/widgets/general_widgets/headers.dart';
 import 'package:iconsax/iconsax.dart';
@@ -63,86 +64,101 @@ class _AccountState extends State<Account> {
                 height: 60,
               ),
                Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      width: 200,
-                      padding: EdgeInsets.all(10),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(10),
-                        boxShadow: [BoxShadow(
-                            offset: Offset(6, 4),
-                            spreadRadius: 2,blurRadius: 2,
-                          color: Colors.grey.withOpacity(0.05)
-                        )]
+                    Card(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16)
                       ),
-                      child: Row(
-                        children: [
-                          const CircleAvatar(
-                            radius: 3,
-                            backgroundColor: Colors.deepOrange,
-                          ),
-                          const SizedBox(
-                            width: 5,
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('Weight',style: TextStyle(color: Colors.black.withOpacity(0.5)),),
-                              const Text(
-                                '55kg',
-                                style: TextStyle(fontWeight: FontWeight.w600),
+                      elevation:0,
+                      child: Container(
+                        width: 120,
+
+                        padding: EdgeInsets.symmetric(vertical: 25,horizontal: 16),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Padding(
+                              padding: EdgeInsets.only(top: 5),
+                              child: CircleAvatar(
+                                radius: 3,
+                                backgroundColor: Colors.blueAccent,
                               ),
-                            ],
-                          )
-                        ],
+                            ),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('Weight',style:textTheme.bodySmall?.copyWith(color: Colors.grey),),
+                                 const SizedBox(height: 5,),
+                                 Text(
+                                  '55kg',
+                                  style: textTheme.bodyLarge!.copyWith(fontWeight: FontWeight.w600),
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
                       ),
                     ),
-                    Container(
-                      width: 200,
-                      padding: EdgeInsets.all(10),
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(10),
-                          boxShadow: [BoxShadow(
-                              spreadRadius: 1,blurRadius: 1,
-                              offset: Offset(6, 4),
-                              color: Colors.grey.withOpacity(0.03)
+                    Card(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16)
+                      ),
+                      elevation:0,
+                      child: Container(
+                        width: 120,
 
-                          )]
+                        padding: EdgeInsets.symmetric(vertical: 25,horizontal: 16),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Padding(
+                              padding: EdgeInsets.only(top: 5),
+                              child: CircleAvatar(
+                                radius: 3,
+                                backgroundColor: Colors.blueAccent,
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('Weight',style:textTheme.bodySmall?.copyWith(color: Colors.grey),),
+                                const SizedBox(height: 5,),
+                                Text(
+                                  '55kg',
+                                  style: textTheme.bodyLarge!.copyWith(fontWeight: FontWeight.w600),
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
                       ),
-                      child: Row(
-                        children: [
-                          const CircleAvatar(
-                            radius: 3,
-                            backgroundColor: Colors.deepOrange,
-                          ),
-                          const SizedBox(
-                            width: 5,
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('height',style: TextStyle(color: Colors.black.withOpacity(0.5))),
-                              const Text('170cm',
-                                  style: TextStyle(fontWeight: FontWeight.w600)),
-                            ],
-                          )
-                        ],
-                      ),
-                    )
+                    ),
                   ],
                 ),
               ),
               const SizedBox(
                 height: 40,
               ),
-              const Text(
+               Text(
                 'Your Recent Threads',
-                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+                style: textTheme.titleLarge!.copyWith(fontWeight: FontWeight.w500,),
               ),
               // SizedBox(height: 20,),
               const ProfileThreads()

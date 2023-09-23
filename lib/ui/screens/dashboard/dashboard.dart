@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:cunsultant_app/ui/screens/account/account.dart';
+import 'package:cunsultant_app/ui/screens/add_screen/add_screen.dart';
 import 'package:cunsultant_app/ui/screens/chats/chat_screen.dart';
 import 'package:cunsultant_app/ui/screens/community/community.dart';
 import 'package:cunsultant_app/ui/screens/home/home_screen.dart';
@@ -25,41 +26,35 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
     const Account(),
   ];
 
-  // FloatingActionButton(
-  // // elevation: 0,
-  //
-  // backgroundColor: Theme.of(context).colorScheme.background,
-  // foregroundColor: Theme.of(context).colorScheme.primary,
-  // onPressed: () {
-  // Navigator.of(context)
-  //     .push(CupertinoPageRoute(builder: (index) => const AddDoctor()));
-  // },
-  // shape: const CircleBorder(eccentricity: 0.7),
-  // child: const Icon(Icons.add),
-  // )
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: Card(
-        elevation: 3,
-        shadowColor: Theme.of(context).colorScheme.primary,
-        color: Theme.of(context).colorScheme.background,
-        shape: const CircleBorder(),
-        child: SizedBox(
-            height: 60,
-            width: 60,
-            child: Center(
-              child: Icon(
-                Icons.add,
-                color: Theme.of(context).colorScheme.primary,
-              ),
-            )),
+      floatingActionButton: InkWell(
+        onTap: () => Navigator.of(context)
+            .push(CupertinoPageRoute(builder: (index) => AddDoctor())),
+        child: Card(
+          elevation: 3,
+          shadowColor: Theme.of(context).colorScheme.primary,
+          color: Theme.of(context).colorScheme.background,
+          shape: const CircleBorder(),
+          child: SizedBox(
+              height: 60,
+              width: 60,
+              child: Center(
+                child: Icon(
+                  Icons.add,
+                  color: Theme.of(context).colorScheme.primary,
+                ),
+              )),
+        ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: IndexedStack(index: selectindex, children: pages),
       bottomNavigationBar: NavBar(
-        indicator: CircleAvatar(radius: 10,backgroundColor: Theme.of(context).colorScheme.primary,),
+        indicator: CircleAvatar(
+          radius: 10,
+          backgroundColor: Theme.of(context).colorScheme.primary,
+        ),
         navItem: [
           NavItemModel(
             onTap: () {},

@@ -11,7 +11,7 @@ class _NearbyDocState extends State<NearbyDoc> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 200,
+      height: 250,
       child: ListView.builder(
         shrinkWrap: true,
         scrollDirection: Axis.horizontal,

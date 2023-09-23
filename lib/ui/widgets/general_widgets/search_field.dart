@@ -23,10 +23,13 @@ class _SearchFieldState extends State<SearchField> {
         ),
         child: TextFormField(
           cursorHeight: 15,
-          decoration: const InputDecoration(
+          decoration:InputDecoration(
+
             hintText: 'search',
-            fillColor: Colors.white,
-            border: InputBorder.none,
+            border:OutlineInputBorder(
+                gapPadding: 2,
+                borderSide: BorderSide.none,
+                borderRadius: BorderRadius.circular(10)),
             filled: true,
 
           ),

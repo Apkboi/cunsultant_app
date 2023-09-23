@@ -1,3 +1,4 @@
+import 'package:cunsultant_app/utils/theme/text_theme.dart';
 import 'package:flutter/material.dart';
 class DocItems extends StatefulWidget {
   const DocItems({Key? key}) : super(key: key);
@@ -18,13 +19,15 @@ class _DocItemsState extends State<DocItems> {
         itemCount: 4,
         scrollDirection: Axis.horizontal,
         physics: BouncingScrollPhysics(),
-        itemBuilder: (BuildContext context, int index)=>Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 5),
-          child: Container(
-            padding: const EdgeInsets.all(10),
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10), color: Colors.white),
-            child:  Text(txt[index],style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500),),
+        itemBuilder: (BuildContext context, int index)=>Card(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 5),
+            child: Container(
+              padding: const EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10), ),
+              child:  Text(txt[index],style: textTheme.titleSmall!.copyWith(fontWeight: FontWeight.w500),),
+            ),
           ),
         ),
 

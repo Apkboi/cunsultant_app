@@ -42,7 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               NearbyDoc(),
               const SizedBox(
-                height: 50,
+                height: 20,
               ),
               Text(
                 'Threads You Might Like',

@@ -1,3 +1,4 @@
+import 'package:cunsultant_app/utils/theme/text_theme.dart';
 import 'package:flutter/material.dart';
 
 class CommunityItems extends StatefulWidget {
@@ -8,24 +9,51 @@ class CommunityItems extends StatefulWidget {
 }
 
 class _CommunityItemsState extends State<CommunityItems> {
-  final List<String> txt = ['All', 'General', 'Covid19', 'Allergies','Infections'];
+  final List<String> txt = [
+    'All',
+    'General',
+    'Covid19',
+    'Allergies',
+    'Infections'
+  ];
+  String selectedCategory="All";
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 40,
+      height: 50,
       child: ListView.builder(
         shrinkWrap: true,
         itemCount: 5,
         scrollDirection: Axis.horizontal,
         physics: BouncingScrollPhysics(),
-        itemBuilder: (BuildContext context, int index)=>Container(
-        padding: const EdgeInsets.all(10),
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10), color: Colors.white),
-        child:  Text(txt[index],style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500),),
-      ),
+        itemBuilder: (BuildContext context, int index) {
+          bool isSelected=selectedCategory==txt[index];
+        return GestureDetector(
+            onTap:(){
+              setState(() {
+                selectedCategory=txt[index];
+              });
+            },
+            child: Card(
 
+              elevation: isSelected?0:1,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  side:isSelected? BorderSide(color: Theme.of(context).colorScheme.primary):BorderSide.none
+              ),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 25,vertical: 10),
+                child: Center(
+                  child: Text(
+                    txt[index],
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w500,color: Colors.grey),
+                  ),
+                ),
+              ),
+            ),
+          );
+        },
       ),
     );
   }

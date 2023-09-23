@@ -83,7 +83,7 @@ class _AddDocListState extends State<AddDocList> {
                     Text('4.5 . ', style: TextStyle(color: Colors.grey)),
                     Text(
                       'Available Mon - Wed, 9:00 - 15:00 ',
-                      style: TextStyle(color: Colors.grey),
+                      style: TextStyle(color: Colors.grey,),
                     ),
                   ],
                 ),
