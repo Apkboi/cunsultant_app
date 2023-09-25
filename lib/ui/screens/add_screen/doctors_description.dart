@@ -23,7 +23,7 @@ class _DoctorsDetailsState extends State<DoctorsDetails> {
           child: Column(
             children: [
               const SizedBox(
-                height: 40,
+                height: 30,
               ),
               Container(
                 decoration: BoxDecoration(
@@ -191,7 +191,11 @@ class _DoctorsDetailsState extends State<DoctorsDetails> {
                 children: [
                   Container(
                     width: 150,
-                    decoration: const BoxDecoration(),
+                    decoration: const BoxDecoration(
+
+                    ),
+                      child: Image.asset(height: 100, 'assets/png/doc.png')
+
                   ),
                   Container(
                     decoration: const BoxDecoration(color: Colors.white),

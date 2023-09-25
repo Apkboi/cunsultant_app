@@ -29,6 +29,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       floatingActionButton: InkWell(
         onTap: () => Navigator.of(context)
             .push(CupertinoPageRoute(builder: (index) => AddDoctor())),
@@ -51,6 +52,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: IndexedStack(index: selectindex, children: pages),
       bottomNavigationBar: NavBar(
+        hasFab: true,
         indicator: CircleAvatar(
           radius: 10,
           backgroundColor: Theme.of(context).colorScheme.primary,

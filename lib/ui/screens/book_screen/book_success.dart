@@ -24,18 +24,31 @@ class _BookSuccessState extends State<BookSuccess> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const CircleAvatar(
-                radius: 70,
-                backgroundColor: Colors.grey,
-                child: CircleAvatar(
-                  radius: 68,
-                  backgroundColor: Colors.white,
-                  child: CircleAvatar(
-                    radius: 66,
-                    backgroundColor: Color(0xff1e9996),
-                    child: Center(
-                      child: Icon(Iconsax.more),
-                    ),
+              const SizedBox(
+
+                height: 108,
+                width: 108,
+                child: Center(
+                  child: Stack(
+
+                    children: [
+                      Center(
+                        child: SizedBox(
+                            height: 107,
+                            width: 107,
+
+                            child: CircularProgressIndicator(value: 0.7,)),
+                      ),
+                      Center(
+                        child: CircleAvatar(
+                          radius: 50,
+                          backgroundColor: Color(0xff1e9996),
+                          child: Center(
+                            child: Icon(Iconsax.more),
+                          ),
+                        ),
+                      )
+                    ],
                   ),
                 ),
               ),
